@@ -1,0 +1,527 @@
+/* Reset and base styles */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+/* Header and navigation styling */
+.site-header {
+	position: relative;
+	height: 100vh;
+	background: url('images/photo1459666644539a9.png') no-repeat center center/cover;
+}
+
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em 2em;
+}
+
+.logo img {
+	max-height: 60px;
+	/* Adjust based on your actual logo size */
+}
+
+.nav-links {
+	list-style: none;
+	display: flex;
+}
+
+.nav-links li {
+	padding: 0 1em;
+}
+
+.nav-links a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 1.1em;
+	text-transform: uppercase;
+}
+
+/* Hero image text styling */
+.hero-image {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+	text-align: center;
+}
+
+.hero-image img {
+	max-width: 80%;
+	/* Adjust the width as per your design needs */
+	height: auto;
+}
+
+/* Add responsive design styles if necessary */
+@media (max-width: 768px) {
+
+	/* Adjust styles for mobile view */
+	.nav-links {
+		flex-direction: column;
+	}
+
+	.nav-links li {
+		padding: 0.5em 0;
+	}
+
+	/* Stack the logo and navigation vertically */
+	.navbar {
+		flex-direction: column;
+	}
+
+	.logo img {
+		max-height: 50px;
+	}
+}
+
+/* Additional styles and responsiveness go here */
+
+
+
+.navigation-bar {
+	background: #fff;
+	/* or any color that matches your design */
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+	/* Optional: adds a subtle shadow for depth */
+	margin-bottom: -5px;
+	/* Overlap the navigation bar with the section below it */
+}
+
+.container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 20px;
+}
+
+.small-logo {
+	max-height: 50px;
+	/* Adjust to match the size of your smaller logo */
+}
+
+.section-nav ul {
+	list-style: none;
+	display: flex;
+	gap: 20px;
+	/* Adjust the space between navigation items */
+}
+
+.section-nav a {
+	text-decoration: none;
+	color: #333;
+	/* Color for the text links */
+	font-size: 1.2rem;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.section-nav a:hover,
+.section-nav a:focus {
+	text-decoration: underline;
+	/* Highlight text on hover/focus */
+}
+
+/* Responsive Design for Navigation Bar */
+@media (max-width: 768px) {
+	.navigation-bar {
+		/* Adjust the navigation bar for mobile views */
+		padding: 10px 0;
+	}
+
+	.section-nav ul {
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+.navigation-bar .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 20px;
+}
+
+.branding {
+	display: flex;
+	align-items: center;
+}
+
+.small-logo {
+	max-height: 50px;
+	/* Adjust to match the size of your smaller logo */
+	margin-right: 20px;
+	/* Adds space between the small logo and the Los Angeles Mountains logo */
+}
+
+.los-angeles-mountains-logo {
+	max-height: 80px;
+	/* Adjust based on the size of this logo */
+}
+
+
+
+.history-section {
+	/* Adjust the min-height to control the height of the background image */
+
+	background: url('images/peak.png') no-repeat center center/cover;
+	min-height: 100vh;
+	text-align: center;
+	color: #fff;
+	position: relative;
+}
+
+/* Style for the content above the carousel */
+.history-content {
+	padding-top: 50px;
+	/* Space from the top of the section */
+	padding-bottom: 100px;
+	/* Space from the content to the carousel */
+	/* Other styles as needed */
+}
+
+.history-overlay {
+	/* ... your existing styles ... */
+
+	/* Add padding to the top to push down the content */
+	padding-top: 15vh;
+	/* 30% from the top; adjust the value as needed */
+}
+
+
+/* Carousel Styles */
+.carousel-container {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	/* Position at the bottom of the history section */
+}
+
+.carousel-track-container {
+	overflow: hidden;
+}
+
+.carousel-track {
+	display: flex;
+	transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+	width: 100%;
+	/* Each slide takes full width */
+	flex-shrink: 0;
+	/* Prevents slides from shrinking */
+	/* Styles for the slides */
+}
+
+.carousel-indicators {
+	position: absolute;
+	bottom: 10px;
+	/* Adjust as needed */
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+}
+
+.carousel-indicators button {
+	border: none;
+	background-color: #fff;
+	border-radius: 50%;
+	width: 10px;
+	height: 10px;
+	margin: 0 5px;
+	cursor: pointer;
+}
+
+.carousel-indicators button.active {
+	background-color: #000;
+}
+
+
+.carousel-container::before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	/* Height of the blue shadow */
+	background-color: rgba(0, 123, 255, 0.3);
+	/* Blue color with transparency */
+	z-index: -1;
+	/* Positions it behind the carousel slides */
+}
+
+
+
+
+
+
+/* Team Section Styles */
+.team-section {
+	text-align: center;
+	padding: 100px 20px;
+	/* Adjust padding to match your design */
+	background-color: #f8f9fa;
+	/* This should be the color of your background */
+}
+
+.team-number-image,
+.team-title-image {
+	max-width: 100%;
+	/* Ensures the images are responsive and fit the container */
+	height: auto;
+	/* Maintains the aspect ratio */
+	display: block;
+	/* Display images as block to stack them */
+	margin: 0 auto;
+	/* Center the images */
+	/* Add any additional styling for the images if needed */
+}
+
+.team-description {
+	color: #212529;
+	/* Match the color to your design */
+	font-size: 1rem;
+	/* Adjust the font size as needed */
+	margin-top: 20px;
+	/* Spacing between the image and text */
+}
+
+/* Ensure this section is responsive for different screen sizes */
+@media (max-width: 768px) {
+	.team-content {
+		padding: 50px 10px;
+	}
+
+	.team-number-image,
+	.team-title-image {
+		max-width: 80%;
+		/* You can reduce the size on smaller screens */
+	}
+
+	.team-description {
+		font-size: 0.9rem;
+		/* Smaller text on mobile devices */
+	}
+}
+
+/* Team Section Styles */
+.team-section {
+	display: flex;
+	/* Aligns items horizontally */
+	align-items: center;
+	/* Aligns items vertically */
+	justify-content: center;
+	/* Centers the content horizontally */
+	gap: 20px;
+	/* Adjust the space between the elements */
+	padding: 35px 35px;
+	/* Adjust padding to match your design */
+	background-color: #f8f9fa;
+	/* This should be the color of your background */
+}
+
+.team-content {
+	display: flex;
+	/* Aligns the children (img and p) horizontally */
+	align-items: center;
+	/* Aligns items vertically */
+	gap: 20px;
+	/* Adjust the space between the elements */
+}
+
+.team-number-image,
+.team-title-image {
+	height: auto;
+	/* Maintains the aspect ratio */
+	/* Adjust width as needed to fit your design, for example: */
+	max-height: 60px;
+	/* This height must be adjusted to fit your design */
+}
+
+.team-description {
+	color: #212529;
+	/* Match the color to your design */
+	font-size: 1rem;
+	/* Adjust the font size as needed */
+	margin: 0;
+	/* Removes default margin from <p> */
+}
+
+/* Ensure this section is responsive for different screen sizes */
+@media (max-width: 768px) {
+	.team-content {
+		flex-direction: column;
+		/* Stacks items vertically on smaller screens */
+		text-align: center;
+		/* Aligns text to center on smaller screens */
+	}
+
+	.team-number-image,
+	.team-title-image {
+		max-width: 80%;
+		/* Full width on smaller screens */
+	}
+
+	.team-description {
+		font-size: 0.9rem;
+		/* Smaller text on mobile devices */
+	}
+}
+
+
+
+.navigation-strip {
+	background-color: #002d62;
+	/* Dark blue background */
+	color: #ffffff;
+	/* White text color */
+	position: relative;
+	/* Needed for absolute positioning of pseudo-element */
+}
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+	/* Center the container */
+	padding: 10px 0;
+	/* Padding for the navigation strip */
+}
+
+.mountain-nav ul {
+	list-style: none;
+	padding-left: 0;
+	display: flex;
+	justify-content: center;
+	/* Center the list items */
+	gap: 50px;
+	/* Space between the list items */
+	position: relative;
+	/* Relative positioning for the pseudo-element */
+}
+
+.mountain-nav ul::after {
+	content: '';
+	position: absolute;
+	bottom: -5px;
+	/* Position the line below the text */
+	left: 0;
+	width: 100%;
+	/* Full width of the container */
+	height: 3px;
+	/* Height of the blue line */
+	background-color: rgba(0, 123, 255, 0.5);
+	/* Semi-transparent blue line */
+	z-index: -1;
+	/* Ensure it's behind the text */
+}
+
+.mountain-link a {
+	text-decoration: none;
+	color: #ffffff;
+	/* White text color */
+	font-weight: bold;
+	font-size: 1.2rem;
+	transition: color 0.3s ease;
+	/* Smooth transition for color change */
+	background: #002d62;
+	/* Background color the same as the navigation strip */
+	padding: 5px 10px;
+	/* Padding to make the background visible */
+}
+
+.mountain-link:hover a,
+.mountain-link.active a {
+	color: #ffd700;
+	/* Gold color when hovered or active */
+	text-shadow: 0px 0px 10px rgba(255, 215, 0, 0.75);
+	/* Glow effect on hover or active */
+	background-color: #002d62;
+	/* Ensure the background color is consistent */
+}
+
+/* ... existing styles ... */
+
+.mountain-background {
+	position: relative;
+	width: 100%;
+	height: auto;
+	/* or set a specific height */
+}
+
+.mountain-bg-image {
+	width: 100%;
+	height: auto;
+	/* Maintain aspect ratio */
+	display: block;
+	/* Remove any inline spacing */
+}
+
+.schedule-container {
+	position: absolute;
+	top: 40%;
+	/* Adjust as needed */
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.dates {
+	display: none;
+	/* Hide by default, will be shown based on the active mountain */
+}
+
+/* Show the active dates based on the clicked mountain link */
+.dates.active {
+	display: block;
+}
+
+
+/* ... additional styles ... */
+
+
+.site-footer {
+	background-color: #002d62;
+	/* Light blue background color */
+	padding: 10px 0;
+	/* Padding for the blue strip */
+	text-align: center;
+	/* Center the content */
+}
+
+.footer-strip {
+	display: inline-block;
+	/* Align the strip inline */
+	width: 100%;
+}
+
+.footer-link {
+	display: inline-block;
+	/* Align links inline */
+	margin: 0 15px;
+	/* Spacing between links */
+}
+
+.footer-link img {
+	max-width: 100px;
+	/* Set a maximum width for the images */
+	height: auto;
+	/* Maintain aspect ratio */
+	transition: transform 0.2s;
+	/* Smooth transition for scaling */
+}
+
+.footer-link:hover img,
+.footer-link:focus img {
+	transform: scale(1.1);
+	/* Scale up the image on hover or focus */
+}
